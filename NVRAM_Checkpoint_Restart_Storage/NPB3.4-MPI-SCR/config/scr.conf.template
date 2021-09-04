@@ -1,0 +1,25 @@
+#---------------------------------------------------------------------------
+# Sets the debug verbosity level of SCR. To increase vebosity, set the level
+# to 1 or 2.
+#---------------------------------------------------------------------------
+DEBUG=0
+
+#---------------------------------------------------------------------------
+# Specify the number of checkpoints between periodic SCR flushes to the
+# parallel file system. Set to 0 to disable periodic flushes.
+#---------------------------------------------------------------------------
+SCR_FLUSH=10
+
+#---------------------------------------------------------------------------
+# Specify the prefix directory on the parallel file system where checkpoints
+# should be read from and written to. 
+#---------------------------------------------------------------------------
+SCR_PREFIX=
+
+#---------------------------------------------------------------------------
+# Specify the base directory SCR should use to cachecheckpoints.
+#---------------------------------------------------------------------------
+SCR_CACHE_BASE=/dev/shm
+
+
+
