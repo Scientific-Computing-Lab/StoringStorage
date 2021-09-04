@@ -9,7 +9,6 @@ gcc -O3 -I utiities -I linear-algebra/kernels/atax ../../utilities/polybench.c .
 gcc -O3 -I utiities -I linear-algebra/kernels/atax ../../utilities/polybench.c ../../linear-algebra/kernels/atax/atax.c -DPOLYBENCH_PAPI -lpapi -o atax_papi
 #we execute PolyBench on one socket of our environment using the numactl tool to bind the computation to cpu and memory resources of socket 0
 numactl --membind=0 --cpubind=0 ./atax_time > atax_$(echo $i)_time.txt
-#papi provides us floating point operation counting
 ./atax_papi > atax_$(echo $i)_papi.txt
 
 done
