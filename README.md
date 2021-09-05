@@ -10,3 +10,6 @@ The NPB suite can be found [here](https://www.nas.nasa.gov/software/npb.html).
 
 ### PolyBench Benchmarks
 The PolyBench suite can be found [here](https://web.cse.ohio-state.edu/~pouchet.2/software/polybench).
+
+## Experimental System Specifications and DCPMM Population
+<img src="system_specifications.JPG" width="400"> <img src="dcpmm_population.JPG" width="540">
