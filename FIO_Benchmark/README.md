@@ -24,6 +24,6 @@ fio --name=seq-writer --rw=write --size=512MB --bs=8KB --runtime=30 --ioengine=s
 ```
 fio --name=rand-writer --rw=randwrite --size=512MB --bs=8KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 fsync=1 --numjobs=8
 ```
-tune the 'numjobs' parameter to test the performances of your device in changing number of threads, conducting I/Os in parallel. \
+tune the 'numjobs' parameter to test the performances of your device in changing number of threads, conducting I/Os in parallel. 
 
 The reuslts of FIO on our experimental system are given in *fio_benchmark_results.xlsx*.
