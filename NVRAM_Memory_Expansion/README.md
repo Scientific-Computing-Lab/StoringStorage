@@ -4,5 +4,5 @@ In this section of the work we evaluate the performances of Optane™ DCPMMT in 
 To compare these results with a traditional solution to the DRAM limits problem, these benchmarks 
 were also executed on a configuration without Optane™ DCPMMs, but with memory swapping to a SATA-SSD device. 
 
-The performances of NPB and PolyBench on our experimental system are given in *memory_expansion_results.xlsx*. 
+**The performances of NPB and PolyBench on our experimental system are given in *memory_expansion_results.xlsx*.**
 
