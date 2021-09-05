@@ -12,7 +12,7 @@ The user-space library file system handles data operations via POSIX calls inter
 
 In this section of the work we evaluate some PMFSs (ext4, SplitFS, Nova) using the BTIO benchmark, focusing on the MPI-IO method. We compare these results with conducting I/O operations to SATA-SSD device (throuth the xfs file system).
 
-The reuslts of BTIO on our experimental system are given in *btio_pmfs_results.xlsx*.
+**The reuslts of BTIO on our experimental system are given in *btio_pmfs_results.xlsx*.**
 
 ## Running
 - get the BTIO benchmark:
