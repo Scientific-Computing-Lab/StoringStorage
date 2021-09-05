@@ -3,7 +3,10 @@ The FIO tester is a versatile storage benchmark tool that is used both for bench
 In this work we use the FIO tester to evaluate the performances of Intel Optane™ DCPMM, using various file systems. \
 We compare the resulting performances of Intel Optane™ DCPMM with the performances of SATA-SSD. \
 Note that the FIO tester does not exhebit sceintific computing patterns, but rather is used as a simple benchmarking tool to evaluate simple I/O patterns.
-- Read more about the FIO tester [here](https://fio.readthedocs.io/en/latest/fio_doc.html).
+
+Read more about the FIO tester [here](https://fio.readthedocs.io/en/latest/fio_doc.html). 
+
+### Running
 - Get FIO for your machine (e.g. using yum for RPM-based distributions):
 ```
 yum install fio
