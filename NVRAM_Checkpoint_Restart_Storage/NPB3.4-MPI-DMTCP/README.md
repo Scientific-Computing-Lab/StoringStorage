@@ -85,3 +85,51 @@ To stop or kill the DMTCP run the following command:
 ```bash
 dmtcp_command -kill --port <coordinator-port>
 ```
+
+### Execution Utility
+
+To ease the benchmark execution, one can use the python utility script located under the `utils` directory. The utility enables to run the benchmark with/without crash and with/without recover.
+
+To run the script execute the following command:
+
+```bash
+python3 utils/benchmark.py \
+   --nvram-mount-directory /tmp/pmem_emul/bt \
+   --benchmark-class <benchmark class> \ 
+   --coord_port 12345 \
+   --procs <number of processes> \  
+   --crash \
+   --crash-iteration <crash iteration number in multiples of 20> \
+   --recover
+```
+
+The utility supports the following options:
+
+```bash
+$ python3 utils/benchmark.py --help
+usage: benchmark.py [-h] -n NVRAM_MOUNT_DIRECTORY -c BENCHMARK_CLASS
+                    [-p PROCS] [-o COORD_PORT] [--crash] [--no-crash]
+                    [-i CRASH_ITERATION] [--recover] [--no-recover]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NVRAM_MOUNT_DIRECTORY, --nvram-mount-directory NVRAM_MOUNT_DIRECTORY
+                        The mount directory of nvram.
+  -c BENCHMARK_CLASS, --benchmark-class BENCHMARK_CLASS
+                        The benchmark class.
+  -p PROCS, --procs PROCS
+                        The number of processes to run the benchmark with.
+  -o COORD_PORT, --coord_port COORD_PORT
+                        The checkpoint interval to run the benchmark with.
+  --crash               If set, the benchmark would perform a crash at the
+                        specified iteration.
+  --no-crash            If set, the benchmark would not perform a crash.
+  -i CRASH_ITERATION, --crash-iteration CRASH_ITERATION
+                        The iteration to crash/restart the benchmark.
+  --recover             If true, the benchmark would perform a recovery after
+                        a crash.
+  --no-recover          If true, the benchmark would not perform a recovery
+                        after a crash.
+```
+
+> **_NOTE:_**  After the utility execution the checkpoints are deleted from the persistent memory.
