@@ -15,16 +15,18 @@ In this section of the work we evaluate some PMFSs (ext4, SplitFS, Nova) using t
 The reuslts of BTIO on our experimental system are given in *btio_pmfs_results.xlsx*.
 
 ## Running
+- get the BTIO benchmark:
 ```
 git clone git@github.com:wkliao/BTIO.git
 cd  BTIO
 ```
-edit ```./Makefile``` and change the following 3 variables:
+- edit ```./Makefile``` and change the following 3 variables:
 ```
 MPIF90        -- MPI Fortran compiler
 FCFLAGS       -- compile flag
 PNETCDF_DIR   -- path of PnetCDF library (1.4.0 and higher is required)
 ```
-Run command ```make``` to build the executable, named *btio*, in the current folder.
-move the attached script file ```run_btio_benchmark.sh``` to the current dir (BTIO).
-edit *RELEVANT_MOUNTED_POINT* in ```run_btio_benchmark.sh``` to the relevant mounted directory path where you want to perform I/Os.
+- run command ```make``` to build the executable, named *btio*, in the current folder.
+- move the attached script file ```run_btio_benchmark.sh``` from this repo to the current dir (```BTIO```).
+- edit ```RELEVANT_MOUNTED_POINT``` in ```run_btio_benchmark.sh``` to the relevant mounted directory path where you want to perform I/Os.
+- run the attached script ```./run_btio_benchmark.sh```.
