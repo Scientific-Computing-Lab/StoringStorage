@@ -4,7 +4,6 @@
 
 for i in 32 64 128 256 512 1024;
 do
-	break
 	rm -rf RELEVANT_MOUNTED_POINT/btio.mpi
 	sync; echo 1 > /proc/sys/vm/drop_caches
 	sed -i "1s/.*/w                 # IO mode:    w for write, r for read/" inputbt.data
