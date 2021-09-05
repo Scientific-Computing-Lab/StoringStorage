@@ -42,7 +42,7 @@ mkfs -t xfs /dev/pmem0
 mount -o dax /dev/pmem0 RELEVANT_MOUNTED_POINT
 ```
 ### Nova
-If Nova already exists in your given kernel, it is easy to use it in the following way:
+If Nova already exists on your given kernel, it is easy to use it in the following way:
 ```
 insmod /usr/lib/modules/4.13.0/kernel/fs/nova/nova.ko
 mount -t NOVA -o init /dev/pmem0 RELEVANT_MOUNTED_POINT
