@@ -6,9 +6,15 @@ As the High Performance Computing (HPC) world moves towards the Exa-Scale era, h
 In this work we focus on scientific benchmarks that are often used for evaluating the performance of parallel supercomputers. We experiment with representative memory and storage usage scenarios scientific applications that run on HPC systems, in order to assess the extent to which NVM can increase productivity for scientific computing.
 
 ### Nas Parallel Benchmarks (NPB)
+The NAS Parallel Benchmarks (NPB) are a small set of programs designed to help evaluate the performance of parallel supercomputers. The benchmarks are derived from computational fluid dynamics (CFD) applications and consist of five kernels and three pseudo-applications in the original "pencil-and-paper" specification (NPB 1). The benchmark suite has been extended to include new benchmarks for unstructured adaptive meshes, parallel I/O, multi-zone applications, and computational grids. Problem sizes in NPB are predefined and indicated as different classes. Reference implementations of NPB are available in commonly-used programming models like MPI and OpenMP (NPB 2 and NPB 3). \
 The NPB suite can be found [here](https://www.nas.nasa.gov/software/npb.html).
 
+### PnetCDF I/O Benchmark using BTIO Pattern
+Specifically, the BTIO benchmark can be found [here](https://github.com/wkliao/BTIO). \
+This software benchmarks the performance of PnetCDF and MPI-IO methods for the I/O pattern used by the NASA's NAS Parallel Benchmarks (NPB) suite.
+
 ### PolyBench Benchmarks
+PolyBench is a collection of benchmarks containing static control parts. The purpose is to uniformize the execution and monitoring of kernels, typically used in past and current publications. \
 The PolyBench suite can be found [here](https://web.cse.ohio-state.edu/~pouchet.2/software/polybench).
 
 ## Experimental System Specifications and DCPMM Population
