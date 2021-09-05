@@ -26,6 +26,6 @@ fio --name=rand-writer --rw=randwrite --size=512MB --bs=8KB --runtime=30 --ioeng
 ```
 tune the 'numjobs' parameter to test the performances of your device in changing number of threads, conducting I/Os in parallel. 
 
-refer to [here](https://github.com/Scientific-Computing-Lab-NRCN/StoringStorage/blob/main/NVRAM_Persistent_Memory_FSs/README.md#L34) to see how to mount different PMFSs on the DCPMM device.
+refer to [here](https://github.com/Scientific-Computing-Lab-NRCN/StoringStorage/blob/main/NVRAM_Persistent_Memory_FSs/README.md#mount-pmfss-to-dcpmm-namespace) to see how to mount different PMFSs on the DCPMM device.
 
 The reuslts of FIO on our experimental system are given in *fio_benchmark_results.xlsx*.
