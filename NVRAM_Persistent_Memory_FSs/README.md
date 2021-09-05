@@ -18,5 +18,13 @@ The reuslts of BTIO on our experimental system are given in *btio_pmfs_results.x
 ```
 git clone git@github.com:wkliao/BTIO.git
 cd  BTIO
-
 ```
+edit ```./Makefile``` and change the following 3 variables:
+```
+MPIF90        -- MPI Fortran compiler
+FCFLAGS       -- compile flag
+PNETCDF_DIR   -- path of PnetCDF library (1.4.0 and higher is required)
+```
+Run command ```make``` to build the executable, named *btio*, in the current folder.
+move the attached script file ```run_btio_benchmark.sh``` to the current dir (BTIO).
+edit *RELEVANT_MOUNTED_POINT* in ```run_btio_benchmark.sh``` to the relevant mounted directory path where you want to perform I/Os.
