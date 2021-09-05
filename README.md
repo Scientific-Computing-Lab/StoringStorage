@@ -18,4 +18,8 @@ PolyBench is a collection of benchmarks containing static control parts. The pur
 The PolyBench suite can be found [here](https://web.cse.ohio-state.edu/~pouchet.2/software/polybench).
 
 ## Experimental System Specifications and DCPMM Population
+Our experimental environment consists of a dual-socket server. The DCPMM population configuration is 2-1-1. 
+When using NVM as a node’s memory expansion, we applied the Optane™ DCPMM Memory mode, 
+while in the rest of the work, we applied the App Direct mode. 
+
 <img src="system_specifications.JPG" width="400"> <img src="dcpmm_population.JPG" width="540">
