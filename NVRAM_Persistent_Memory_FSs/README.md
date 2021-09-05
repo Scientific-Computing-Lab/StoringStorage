@@ -10,4 +10,6 @@ The user-space library file system handles data operations via POSIX calls inter
 
 **The SPlitFS file system software is available [here](https://github.com/utsaslab/SplitFS). Instructions how to install and mount SplitFS over NVM devices are included.**
 
-In this section of the work we evaluate some PMFSs (ext4, SplitFS, Nova) using the BTIO benchmark. We compare these results with conducting I/O operations to SATA-SSD device (throuth the xfs file system).
+In this section of the work we evaluate some PMFSs (ext4, SplitFS, Nova) using the BTIO benchmark, focusing on the MPI-IO method. We compare these results with conducting I/O operations to SATA-SSD device (throuth the xfs file system).
+
+The reuslts of BTIO on our experimental system are given in *btio_pmfs_results.xlsx*.
