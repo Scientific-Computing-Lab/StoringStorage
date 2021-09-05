@@ -30,3 +30,23 @@ PNETCDF_DIR   -- path of PnetCDF library (1.4.0 and higher is required)
 - move the attached script file ```run_btio_benchmark.sh``` from this repo to the current dir (```BTIO```).
 - edit ```RELEVANT_MOUNTED_POINT``` in ```run_btio_benchmark.sh``` to the relevant mounted directory path where you want to perform I/Os.
 - run the attached script ```./run_btio_benchmark.sh```.
+
+## Mount PMFSs to DCPMM Namespace
+First, create an App Direct namespace, with the ```ndctl``` tool:
+```
+ndctl create-namespace --force --reconfig=namespace0.0 --mode=fsdax --map=mem
+```
+### ext4-dax
+```
+mkfs -t xfs /dev/pmem0
+mount -o dax /dev/pmem0 RELEVANT_MOUNTED_POINT
+```
+### Nova
+If Nova already exists in your given kernel, it is easy to use it in the following way:
+```
+insmod /usr/lib/modules/4.13.0/kernel/fs/nova/nova.ko
+mount -t NOVA -o init /dev/pmem0 RELEVANT_MOUNTED_POINT
+```
+
+### SplitFS
+Please refer [here](https://github.com/utsaslab/SplitFS) for detailed instructions how to install, mount and use SplitFS.
