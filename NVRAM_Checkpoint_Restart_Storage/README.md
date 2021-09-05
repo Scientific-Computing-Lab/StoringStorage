@@ -14,3 +14,6 @@ The implementation of the BT benchmark is done using the Scalable Checkpoint Res
 
 In transparent C/R the state of the program is savedwithout any knowledge of the application or interventionfrom the programmer.
 The implementation of the BT benchmark is done using the Distributed Multi-Threaded CheckPointing (DMTCP) library, and is located under the `NPB3.4-MPI-DMTCP/` directory.
+
+**The results on our experimental system are given in *checkpoint_restart_results.xlsx*.**
+
