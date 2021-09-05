@@ -10,19 +10,19 @@ yum install fio
 ```
 - Seq-Read Benchmark:
 ```
-fio --name=seq-reader --rw=read --size=512MB --bs=4KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 --numjobs=8
+fio --name=seq-reader --rw=read --size=512MB --bs=8KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 --numjobs=8
 ```
 - Rand-Read Benchmark:
 ```
-fio --name=rand-reader --rw=randread --size=512MB --bs=4KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 --numjobs=8
+fio --name=rand-reader --rw=randread --size=512MB --bs=8KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 --numjobs=8
 ```
 - Seq-Write Benchmark:
 ```
-fio --name=seq-writer --rw=write --size=512MB --bs=4KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 fsync=1 --numjobs=8
+fio --name=seq-writer --rw=write --size=512MB --bs=8KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 fsync=1 --numjobs=8
 ```
 - Rand-Write Benchmark:
 ```
-fio --name=rand-writer --rw=randwrite --size=512MB --bs=4KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 fsync=1 --numjobs=8
+fio --name=rand-writer --rw=randwrite --size=512MB --bs=8KB --runtime=30 --ioengine=sync --thread --filename=RELEVANT_MOUNTED_POINT --direct=1 fsync=1 --numjobs=8
 ```
 tune the 'numjobs' parameter to test the performances of your device in changing number of threads, conducting I/Os in parallel. \
 
