@@ -58,3 +58,51 @@ export SCR_CHECKPOINT_DIR=/path/to/directory
 ```
 
 To ease configuration, an SCR config template is located under 'config/scr.conf.template'. For additional info about SCR configuration, check [SCR documentation](https://scr.readthedocs.io/en/latest/users/config.html).  
+
+### Execution Utility
+
+To ease the benchmark execution, one can use the python utility script located under the `utils` directory. The utility enables to run the benchmark with/without crash and with/without recover.
+
+To run the script execute the following command:
+
+```bash
+python3 utils/benchmark.py \
+   --nvram-mount-directory /tmp/pmem_emul/bt \
+   --benchmark-class <benchmark class> \ 
+   --procs <number of processes> \  
+   --crash \
+   --crash-iteration <crash iteration number in multiples of 20> \
+   --recover
+```
+
+The utility supports the following options:
+
+```bash
+$ python3 utils/benchmark.py --help
+usage: benchmark.py [-h] -n NVRAM_MOUNT_DIRECTORY
+                    [--scr_cache_dir SCR_CACHE_DIR] -c BENCHMARK_CLASS
+                    [-p PROCS] [--crash] [--no-crash] [-i CRASH_ITERATION]
+                    [--recover] [--no-recover]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NVRAM_MOUNT_DIRECTORY, --nvram_mount_directory NVRAM_MOUNT_DIRECTORY
+                        The mount directory of nvram.
+  --scr_cache_dir SCR_CACHE_DIR
+                        The cache directory of SCR.
+  -c BENCHMARK_CLASS, --benchmark_class BENCHMARK_CLASS
+                        The benchmark class
+  -p PROCS, --procs PROCS
+                        The number of processes to run the benchmark with.
+  --crash               If set, the benchmark would perform a crash at the
+                        specified iteration.
+  --no-crash            If set, the benchmark would not perform a crash.
+  -i CRASH_ITERATION, --crash-iteration CRASH_ITERATION
+                        The iteration to crash/restart the benchmark.
+  --recover             If true, the benchmark would perform a recovery after
+                        a crash.
+  --no-recover          If true, the benchmark would not perform a recovery
+                        after a crash.
+```
+
+> **_NOTE:_**  After the utility execution the checkpoints are deleted from the persistent memory.
